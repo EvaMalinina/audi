@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'normal' ;
+  src: local('normal'), url(./fonts/auditype-normal.woff) format('woff');
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
