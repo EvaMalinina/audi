@@ -1,0 +1,24 @@
+@import '../src/shared/styles/_reset.scss';
+@import '../src/shared/styles/colors.scss';
+@import '../src/shared/styles/media.scss';
+
+
+@font-face {
+  font-family: 'audi-normal';
+  src: local('audi-normal'), url(shared/fonts/auditype-normal.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'audi-bold';
+  src: local('audi-bold'), url(shared/fonts/auditype-bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'audi-extended-bold';
+  src: local('audi-extended-bold'), url(shared/fonts/auditype-extendedbold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'audi-italic';
+  src: local('audi-italic'), url(shared/fonts/auditype-italic.woff) format('woff');
+}
