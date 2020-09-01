@@ -1,0 +1,157 @@
+@import './src/shared/styles/colors';
+@import './src/shared/styles/media';
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+
+  @include tablets {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: rem(90px);
+  }
+
+  &__header {
+    margin-bottom: rem(30px);
+    font-size: rem(16px);
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @include tablets {
+      font-size: rem(40px);
+      font-family: 'audi-bold';
+    }
+  }
+
+  p {
+    margin-bottom: rem(30px);
+    font-size: rem(22px);
+  }
+
+  p ~ p{
+    margin-bottom: rem(60px);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    position: relative;
+  }
+
+  input {
+    padding: rem(24px) 0 rem(24px) rem(30px);
+    background-color: $input-bg;
+    box-shadow: 0 rem(1px) 0 0 rgba(3, 47, 135, 0.1);
+    margin-bottom: rem(24px);
+    border-radius: rem(30px);
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+
+  .placeholder {
+    color: $input-text;
+    font-size: rem(16px);
+    font-weight: 300;
+    position: absolute;
+    top: rem(20px);
+    left: rem(24px);
+  }
+
+  .placeholder:after{
+    content: '*';
+    color: red
+  }
+
+  input::placeholder {
+    color: $input-text;
+    font-size: rem(16px);
+    font-weight: 300;
+  }
+
+  &__radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(45px);
+  }
+
+  &__btn {
+    position: relative;
+  }
+}
+
+.radio {
+  &__label{
+    position: relative;
+    margin-left: rem(35px);
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__input{
+    position: absolute;
+    top: 0;
+    left: rem(-9999px);
+  }
+
+  &__input-fake{
+    display: flex;
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $red;
+  }
+
+  &__input-fake::before{
+    content: '';
+    display: flex;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: $red;
+    transition: .5s;
+  }
+
+  &__label-text {
+    margin-left: rem(13px);
+    color: $input-text;
+  }
+}
+
+.radio__input:checked + .radio__input-fake::before{
+  width: rem(15px);
+  height: rem(15px);
+}
+
+.btn {
+  background-color: $black;
+  padding: rem(23px) rem(75px);
+  text-transform: uppercase;
+  font-size: rem(14px);
+  color: $white;
+  border-radius: rem(30px);
+  font-family: 'audi-normal';
+
+  &__bg {
+    position: absolute;
+    top: rem(10px);
+    left: rem(10px);
+    min-width: rem(240px);
+    width: rem(240px);
+    height: rem(60px);
+    z-index: -1;
+    background: url("../../shared/assets/contact-btn-bg.png") no-repeat;
+  }
+}

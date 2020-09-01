@@ -1,5 +1,5 @@
-body {
-  margin: 0;
+body{
+  margin: 0 auto;
   font-family: 'audi-normal';
 }
 
@@ -28,5 +28,12 @@ p {
 
 
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  &:after,
+  &::before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
+

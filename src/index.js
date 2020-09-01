@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import App from './App'
+import { Card } from './pages/card/index';
+import { Forms } from './pages/forms/index';
 
 ReactDOM.render(
   <>
-    <App/>
+    <Card/>
+    <Forms/>
   </>,
   document.getElementById('root')
 );

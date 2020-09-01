@@ -3,9 +3,14 @@
 
 .container {
   width: 85%;
+  max-width: rem(1632px);
   margin: 0 auto;
   position: relative;
   display: flex;
+
+  &_column {
+    flex-direction: column;
+  }
 
   @include tablets {
     width: 92%;
